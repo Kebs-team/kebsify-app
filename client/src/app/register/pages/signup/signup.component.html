@@ -1,0 +1,120 @@
+<div>
+    <div class="logo">
+        <img src="assets/img/logo3.png" alt="">
+        <div class="heading">
+            <h1>Sign up for free to start listening</h1>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="btn">
+            <p>
+                <button mat-flat-button class="facebook-btn">
+                    SIGN UP WITH FACEBOOK
+                </button>
+            </p>
+        </div>
+        <p>
+            <span class="gray">-------------------------------------- or --------------------------------------</span>
+        </p>
+
+        <div class="text-left">
+
+            <p class="heading mb-0">Whats your email?</p>
+            <mat-form-field class="mff-width pb-0" appearance="outline">
+                <mat-label>Email your email</mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <p class="clrgreen">
+                Use phone number insted.
+            </p>
+
+            <p class="heading mb-0">Confirm your email</p>
+            <mat-form-field class="mff-width" appearance="outline">
+                <mat-label>Enter your email again.</mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <p class="heading mb-0">Create a password</p>
+            <mat-form-field class="mff-width" appearance="outline">
+                <mat-label>Create a password.</mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <p class="heading mb-0">What should we call you?</p>
+            <mat-form-field class="mff-width" appearance="outline">
+                <mat-label>Enter a profile name.</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <p> This appears on your profile</p>
+
+            <p class="heading mt-4">What's your date of birth?</p>
+            <div class="d-flex">
+                <div>
+                    <p class="mb-0">Year</p>
+                    <mat-form-field class="year" appearance="outline">
+                        <mat-label>YYYY</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <p class="mb-0">Month</p>
+                    <mat-form-field class="month" appearance="outline">
+                        <mat-label>Month</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <p class="mb-0">Day</p>
+                    <mat-form-field class="day" appearance="outline">
+                        <mat-label>DD</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <p class="heading">What's your gender?</p>
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1" class="mr-5">Male</mat-radio-button>
+                <mat-radio-button value="2">Female</mat-radio-button>
+              </mat-radio-group>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="w">
+            <div class="chkbox">
+                <input type="checkbox"><span> Share my registration data with Spotify's content providers for marketing
+                    purposes.</span>
+            </div>
+
+            <div class="fsizesml mb-3">By clicking on Sign up, you agree to Spotify's <span class="cgrnuln"> Terms and
+                    Conditions of Use.</span>
+            </div>
+
+            <div class="fsizesml mb-3">
+                To learn more about how Spotify collects, uses, shares and protects your personal data please read
+                Spotify's <span class="cgrnuln"> Privacy Policy. </span>
+            </div>
+
+            <button mat-flat-button class="signup-btn mb-4" [routerLink]="['/download']">
+                SIGN UP
+            </button>
+            <p class="heading">
+                Have an account? <span class="cgrnuln"> Log in.</span>
+            </p>
+        </div>
+    </div>
+
+
+</div>

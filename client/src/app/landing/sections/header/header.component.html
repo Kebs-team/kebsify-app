@@ -1,0 +1,17 @@
+<nav class="d-flex justify-content-around align-items-center header">
+    <div class="logo d-flex align-items-center" [routerLink]="['/index2']">
+        <div class="logo-img">
+            <img src="assets/img/logo.png" alt="">
+        </div>
+        <div class="logo-name">
+            <span class="copy">Spotify</span>
+        </div>
+    </div>
+    <div class="d-flex option">
+        <div>Premium</div>
+        <div>Support</div>
+        <div [routerLink]="['/download']">Download</div> |
+        <div [routerLink]="['/register','signup']">Sign up</div>
+        <div [routerLink]="['/register/login']">Log in</div>
+    </div>
+</nav>
