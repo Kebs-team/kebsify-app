@@ -1,37 +1,45 @@
-.header{
-    background-color: rgba(0, 0, 0, 0.6);
+.header {
+    background-color: black;
     position: fixed;
+    font-family: Circular,spotify-circular,Helvetica,Arial,sans-serif;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5;
     width: 100%;
     color: white;
-    padding: 20px 0px;
+    padding: 10px 0px;
     z-index: 10999;
-
+    min-height: 54px;
 }
-.logo{
-    .logo-img{
-        img{
+
+
+.logo {
+    .logo-img {
+        img {
             height: 40px;
             margin-right: 5px;
         }
     }
-    .logo-name{
-        .copy{
-            font-size: xx-large;
+
+    .logo-name {
+        .copy {
+            font-size: larger
         }
     }
 
 }
-.option{
+
+.option {
     gap: 30px;
-    div{
+
+    div {
+        font-size: 15px;
         cursor: pointer;
-    &:hover{
-        text-decoration: underline;
-        color: rgb(228, 217, 217);
+        font-weight: 700;
+
+        &:hover {
+            text-decoration: none;
+            color:green;
+        }
     }
 }
-}
-

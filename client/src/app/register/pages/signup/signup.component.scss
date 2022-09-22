@@ -11,7 +11,7 @@
 }
 
 .mff-width{
-    width: 400px;
+    width: 100%
 }
 .container{
     width: fit-content;
@@ -19,6 +19,7 @@
     text-align: center;
     .heading{
         font-weight: bold;
+        font-family: spotify-circular, Helvetica, Arial, sans-serif;
     }
     .btn{
         button{
@@ -40,7 +41,13 @@
         color: white;
         border: none;
     }
+
+    .google-btn{
+        border-style: solid;
+    }
 }
+
+
 
 .signup-btn{
     width: 400px;
@@ -72,7 +79,7 @@
 }
 
 .w{
-    width: 400px;
+    width: 424px;
 }
 .year{
     width: 130px;
@@ -85,5 +92,9 @@ margin-right: 10px;
 }
 
 .day{
-    width: 100px;
+    width: 124px;
+}
+
+.text-left {
+    text-align: left;
 }

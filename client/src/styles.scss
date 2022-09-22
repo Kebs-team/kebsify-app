@@ -40,3 +40,11 @@ $spotify-theme: mat-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.red-snackbar{
+  background-color: #e43c3c;
+  color:white
+}
+.green-snackbar{
+  background-color: rgb(32, 179, 81);
+  color:white
+}

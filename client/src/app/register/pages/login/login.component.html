@@ -42,38 +42,39 @@
             <span class="gray">--------------------------------------</span>
         </p>
 
+     <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
         <div class="text-left">
 
             <p class="heading mb-0">Email address or username</p>
             <mat-form-field class="mff-width" appearance="outline">
                 <mat-label>Email address or username</mat-label>
-                <input matInput>
+                <input matInput formControlName="email">
             </mat-form-field>
 
             <p class="heading mb-0">Password</p>
             <mat-form-field class="mff-width" appearance="outline">
                 <mat-label>Password</mat-label>
-                <input matInput>
+                <input matInput type="password" formControlName="password">
             </mat-form-field>
 
             <p class="frgt-pass">Forgot your password?</p>
 
-            <div class="d-flex justify-content-between mt-5 align-items-center">
-                <span> <input type="checkbox"> Remember me</span>
-                <button mat-flat-button class="btn-login" [routerLink]="['/home']">
+            <div class="d-flex justify-content-between mt-3 align-items-center">
+                <span> <input type="checkbox"  checked> Remember me</span>
+                <button mat-flat-button class="btn-login">
                     LOG IN
                 </button>
             </div>
         </div>
+     </form>
         <hr>
 
     <p class="heading">
         Don't have an account?
     </p>
-    <button mat-flat-button class="signup-btn" (click)="onroute()">
+    <button mat-flat-button class="signup-btn" routerLink = "/register/signup">
         SIGN UP FOR SPOTIFY
     </button>
-    <hr>
 
     </div>
 

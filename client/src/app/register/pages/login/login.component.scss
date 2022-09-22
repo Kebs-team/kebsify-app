@@ -1,33 +1,39 @@
-.logo{
+.logo {
     text-align: center;
-    img{
+
+    img {
         margin-top: 20px;
         height: 70px;
     }
 }
 
-.gray{
+.gray {
     color: rgb(214, 214, 214);
 }
 
-.mff-width{
-    width: 350px;
+.mff-width {
+    width: 100%;
 }
-.container{
+
+.container {
     width: fit-content;
     padding: 20px 50px;
     text-align: center;
-    .heading{
+
+    .heading {
         font-weight: bold;
+        font-family: spotify-circular, Helvetica, Arial, sans-serif;
     }
-    .btn{
-        button{
-            width: 350px;
+
+    .btn {
+        button {
+            width: 400px;
             height: 45px;
             border-radius: 20px;
             font-weight: 500;
             letter-spacing: 1px;
-            img{
+
+            img {
                 margin-right: 5px;
                 height: 20px;
             }
@@ -35,36 +41,45 @@
 
     }
 
-    .facebook-btn{
+    .facebook-btn {
         background-color: #3b5998;
         color: white;
         border: none;
     }
-    .apple-btn{
+
+    .apple-btn {
         background-color: black;
         color: white;
         border: none;
 
     }
-    .google-btn{
+
+    .google-btn {
         border: 2px solid gray;
         color: grey;
         background-color: white;
     }
-    .phn-btn{
+
+    .phn-btn {
         border: 2px solid grey;
         color: grey;
         background-color: white;
     }
+
+    .d-flex {
+        input[type='checkbox'] {
+            accent-color: green
+        }
+    }
 }
 
-.frgt-pass{
+.frgt-pass {
     text-decoration: underline;
     font-weight: 500;
     color: grey;
 }
 
-.btn-login{
+.btn-login {
     width: 150px;
     height: 40px;
     background-color: green;
@@ -74,13 +89,17 @@
     color: white;
 }
 
-.signup-btn{
+.signup-btn {
     width: 350px;
     height: 45px;
     border-radius: 20px;
     font-weight: 500;
-    letter-spacing: 1px;  
+    letter-spacing: 1px;
     border: 2px solid grey;
     color: grey;
     background-color: white;
+}
+
+.text-left {
+    text-align: left;
 }
