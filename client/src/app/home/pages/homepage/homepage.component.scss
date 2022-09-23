@@ -1,9 +1,4 @@
 
-
-
-
-
-
 // LEFT CONTENT 
 
 .left{
@@ -29,22 +24,20 @@
     }
 }
 
-
-
-
 // MIDDLE CONTENT 
 
 .mid{
-    margin-left: 225px;
+margin-left: 200px;
 padding-top: 20px;
-padding-bottom: 20px;
 width: 100%;
-background-color: rgb(29, 27, 27);;
+background-color: #1a1a1a;
+height: 500px;
+
 .mid-top{
     display: flex;
     justify-content: space-between;
     position: fixed;
-    width: 55%;
+    width: 80%;
     z-index: 10;
     .button-arrow{
         button{
@@ -58,60 +51,13 @@ background-color: rgb(29, 27, 27);;
             background-color: black;
             color: white;
             border: 1px solid white;
-            font-weight: bold;
-            letter-spacing: 1px;
-            width: 150px;
-            border-radius: 20px;
+            width: 110px;
+            border-radius: 46px;
+            margin-left: 18px;
         }
     }
 }
 }
-
-// Top RIGHT CONTENT
-
-.right{
-    height: 100vh;
-    padding-top: 20px;
-    color: rgb(190, 190, 190);
-    background-color: rgb(53, 47, 47);
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    h2{
-        color: white;
-    }
-    h3{
-        line-height: 20px;
-        font-weight: 500;
-
-    }
-    .btn{
-        button{
-            width: 100%;
-            height: 45px;
-            border-radius: 20px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            img{
-                margin-right: 5px;
-                height: 20px;
-            }
-        }
-    
-    }
-    
-    .facebook-btn{
-        background-color: #3b5998;
-        color: white;
-        border: none;
-    }
-    p{
-        font-weight: 500;
-    }
-}
-
-
 .bottom{
     position: fixed;
     bottom: 0;
