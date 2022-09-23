@@ -17,6 +17,10 @@ export class ApiService {
     getPlayList = () => {
         return this._httpclient.get('/api/userplaylist')
     }
+
+    getRecentlyPlayed = () => {
+        return this._httpclient.get('/api/recentlyplayedtracks')
+    }
     
     createPlayList = (body:any) => {
         return this._httpclient.post('/api/createplaylist',body)
