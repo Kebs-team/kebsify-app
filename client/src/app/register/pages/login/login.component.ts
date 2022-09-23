@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
         horizontalPosition: 'end',
         panelClass: ['green-snackbar']
       })
-      this._route.navigate(['/register/home'])
+      this._route.navigate(['/home'])
     }
     else{
         this._snackbar.open("Invalid Credentials","close",{

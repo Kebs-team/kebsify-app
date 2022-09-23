@@ -6,6 +6,10 @@ import { MaterialModule } from '../material.module';
 import { RecentlyplayedComponent } from './pages/homepage/sections/recentlyplayed/recentlyplayed.component';
 import { WorkoutgenreComponent } from './pages/homepage/sections/workoutgenre/workoutgenre.component';
 import { SearchpageComponent } from './pages/searchpage/searchpage.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { FormsModule } from '@angular/forms';
+import { DialogOverviewExampleDialog } from './pages/homepage/sections/Dialogue/createplaylist.component';
+
 
 
 @NgModule({
@@ -13,12 +17,16 @@ import { SearchpageComponent } from './pages/searchpage/searchpage.component';
     HomepageComponent,
     RecentlyplayedComponent,
     WorkoutgenreComponent,
-    SearchpageComponent
+    SearchpageComponent,
+    ProfileComponent,
+    DialogOverviewExampleDialog 
+    
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class HomeModule { }

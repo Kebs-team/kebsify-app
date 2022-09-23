@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const router = express.Router()
 var SpotifyWebApi = require('spotify-web-api-node');
-const token = 'BQCYFQqSoHNrUqONaeZoKjipeYFDK0Kx1tZsfVC1FifMUwI7Fv6CTLDQkWIVIdJ_tRguC-9dYMiFkGb---lf_XW_zI07K61FjbOdeDP7UjYyl7M9IStX3ms18NhQ1f1xEpjxTwcJpytMQhKd_0X90qq6K2wCp-UWaoMyGUdcZSI7ihLlKeQvHxbuFSkM0fAuUnakFIRwexNuGl9hTbi8P-OhRFuAxcTmnc6s-_1xCHitv5uiTODBn0ky0bhcFYxHCAYfM67QzONsRw40y3mnq-OEzm5s9JsgNMT7OjFsviQf2I8Vmi4Ak9LAiQWWGYICz4bQ9Kd_e1lSdO-Bc_17'
+const token = 'BQD-mwz_hFggP_9q2IU9SgmrVtOW1Hsqdm9_CKD3x34-0oobZ1uXy_TCiML2LLQnbcxglY13BJxUpAPWPgpeKlCGRorWc4-sVAQGL3rDgMgYtf8o8NO4b_0yeEMgMHNDUetjUbu0ZXpivKlE-GEqWLR-dLRms3x_rfL-6iibneBIW5F2DlhOSYZNdP6vg2nLKQzvUxF23mSaUzIc0soEjSVpTC3liqXYV3VVJt7gjYD2ZylW8v7ztX8XGP63DXiCD8jWO1eK5-kufenBtKwpLlh24lwxe3gKl1TUJlpTEBl0sAL85iXUCctVITYOx6-3PjlpRma-BX7eBfYHZ0is'
 app.use(express.json())
 
 // credentials are optional
@@ -40,14 +40,13 @@ router.get('/', (req, res, next) => {
 
 router.get('/callback', (req, res, next) => {
     console.log('request query', req.query)
-    // spotifyApi.authorizationCodeGrant(req.query.code).then(
-    //     (response) => {
-    //         res.send(JSON.stringify(response))
-    //         spotifyApi.setAccessToken(token)
-    //     }
-    // )
+    spotifyApi.authorizationCodeGrant(req.query.code).then(
+        (response) => {
+            res.send(JSON.stringify(response.body.access_token))
+            spotifyApi.setAccessToken(token)
+        }
+    )
 })
-
 
 spotifyApi.setAccessToken(token)
 
@@ -139,9 +138,10 @@ spotifyApi.searchTracks(req.params.trackname)
 
 router.post('/api/createplaylist',(req,res)=>{
     const {playlist_name,description,publicmode} = req.body
+    console.log(playlist_name,description,publicmode)
     spotifyApi.createPlaylist(playlist_name, { 'description': description, 'public': publicmode })
     .then(function(data) {
-      res.send('Created playlist');
+      res.send({message:'Created playlist'});
     }, function(err) {
         res.status(500).send({ error: 'Error while creating playlist' })
     });
@@ -164,5 +164,5 @@ router.post('/api/addtracks',(req,res,next)=>{
 app.use('/', router)
 
 app.listen(9000, () => {
-    console.log("working")
+    console.log("Server running on port : 9000")
 })

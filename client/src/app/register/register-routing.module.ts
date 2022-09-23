@@ -12,10 +12,6 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignupComponent
-  },
-  {
-    path: 'home',
-    loadChildren: () => import('../home/home.module').then(m => m.HomeModule)
   }
 ];
 

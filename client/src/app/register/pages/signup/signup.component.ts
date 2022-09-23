@@ -28,8 +28,8 @@ export class SignupComponent implements OnInit {
         verticalPosition: 'top',
         horizontalPosition: 'end',
         panelClass: ['green-snackbar']
-   
       })
+      
       this._route.navigate(["/register/login"])
     }
     else{
