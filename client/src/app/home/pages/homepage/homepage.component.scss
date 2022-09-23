@@ -1,0 +1,146 @@
+
+
+
+
+
+
+// LEFT CONTENT 
+
+.left{
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: white;
+    padding-top: 20px;
+    height: 100vh;
+    .left-options{
+        display: flex;
+        align-items: center;
+        padding: 10px 5px;
+        width: 100%;
+        cursor: pointer;
+        span{
+            margin-left: 20px;
+        }
+        &:hover{
+            background-color: rgb(53, 47, 47);
+        }
+    }
+}
+
+
+
+
+// MIDDLE CONTENT 
+
+.mid{
+    margin-left: 225px;
+padding-top: 20px;
+padding-bottom: 20px;
+width: 100%;
+background-color: rgb(29, 27, 27);;
+.mid-top{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 55%;
+    z-index: 10;
+    .button-arrow{
+        button{
+            background-color: black;
+            color: white;
+            margin-right: 10px;
+        }
+    }
+    .btn-upgrade{
+        button{
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            width: 150px;
+            border-radius: 20px;
+        }
+    }
+}
+}
+
+// Top RIGHT CONTENT
+
+.right{
+    height: 100vh;
+    padding-top: 20px;
+    color: rgb(190, 190, 190);
+    background-color: rgb(53, 47, 47);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    h2{
+        color: white;
+    }
+    h3{
+        line-height: 20px;
+        font-weight: 500;
+
+    }
+    .btn{
+        button{
+            width: 100%;
+            height: 45px;
+            border-radius: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            img{
+                margin-right: 5px;
+                height: 20px;
+            }
+        }
+    
+    }
+    
+    .facebook-btn{
+        background-color: #3b5998;
+        color: white;
+        border: none;
+    }
+    p{
+        font-weight: 500;
+    }
+}
+
+
+.bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(26, 24, 24);
+    color: white;
+    padding: 10px;
+ .gap{
+     gap: 20px;
+     img{
+        height: 60px;
+    }
+    p{
+        margin-bottom: 5px;
+
+    }
+    .p1{
+        font-size: 16px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+ }
+   
+}
+.aud{
+    audio{
+        outline: none;
+        border: none;
+    }
+}

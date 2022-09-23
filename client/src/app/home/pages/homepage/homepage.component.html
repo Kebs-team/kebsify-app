@@ -1,1 +1,82 @@
-homepage works!!
+<div class="container-fluid">
+    <div class="row top">
+        <div class="col-2 left">
+
+            <div class="left-options">
+                Kebsify
+            </div>
+            <div class="left-options">
+                <mat-icon>
+                    home
+                </mat-icon> <span>Home</span>
+            </div>
+            <div class="left-options">
+                <mat-icon>
+                    search
+                </mat-icon> <span>Search</span>
+            </div>
+            <div class="left-options">
+                <mat-icon>
+                    video_library
+                </mat-icon><span>Your Library</span>
+            </div>
+            <p class="mt-4">PLAYLISTS</p>
+            <div class="left-options">
+                <mat-icon>
+                    add_box
+                </mat-icon> <span>Create Playlist</span>
+            </div>
+            <div class="left-options">
+                <mat-icon>
+                    favorite
+                </mat-icon> <span>Liked Songs</span>
+            </div>
+            <hr>
+
+        </div>
+        <div class="col-7 mid">
+            <div class="mid-top">
+                <div class="button-arrow">
+                    <button mat-mini-fab>
+                        <mat-icon> chevron_left</mat-icon>
+                    </button>
+                    <button mat-mini-fab>
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+
+                </div>
+                <div class="btn-upgrade">
+                    <button mat-flat-button class="u-btn">
+                        UPGRADE
+                    </button>
+                </div>
+            </div>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+    <div class="row bottom">
+        <div class="col-5">
+            <div class="d-flex align-items-center gap">
+                <div>
+                    <img src="assets/img/song1.png" alt="">
+                </div>
+                <div>
+                    <p class="p1">
+                        Everybody goes missing in this Apartment building
+                    </p>
+                    <p class="p2">
+                        Rotten Mango
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-7 aud">
+            <audio controls>
+                <source src="assets/audio/ring.mp3" type="audio/mpeg"> 
+            </audio>
+        </div>
+    </div>
+</div>

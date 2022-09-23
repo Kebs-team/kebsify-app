@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { HomeRoutingModule } from './home-routing.module';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { MaterialModule } from '../material.module';
 
 
 @NgModule({
@@ -11,7 +11,8 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    MaterialModule
   ]
 })
 export class HomeModule { }

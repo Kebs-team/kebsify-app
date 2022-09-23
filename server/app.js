@@ -40,18 +40,18 @@ router.get('/', (req, res, next) => {
 
 router.get('/callback', (req, res, next) => {
     console.log('request query', req.query)
-    spotifyApi.authorizationCodeGrant(req.query.code).then(
-        (response) => {
-            res.send(JSON.stringify(response))
-            spotifyApi.setAccessToken(token)
-        }
-    )
+    // spotifyApi.authorizationCodeGrant(req.query.code).then(
+    //     (response) => {
+    //         res.send(JSON.stringify(response))
+    //         spotifyApi.setAccessToken(token)
+    //     }
+    // )
 })
 
 
 spotifyApi.setAccessToken(token)
 
-router.get('/profile', (req, res) => {
+router.get('/api/profile', (req, res) => {
     spotifyApi.getMe()
         .then(function (data) {
             res.send(data.body)
@@ -60,7 +60,7 @@ router.get('/profile', (req, res) => {
         });
 })
 
-router.get('/recentlyplayedtracks', (req, res) => {
+router.get('/api/recentlyplayedtracks', (req, res) => {
     spotifyApi.getMyRecentlyPlayedTracks({
         limit: 20
     }).then(function (data) {
@@ -70,7 +70,7 @@ router.get('/recentlyplayedtracks', (req, res) => {
     })
 })
 
-router.get('/userplaylist', async (req, res) => {
+router.get('/api/userplaylist', async (req, res) => {
     await spotifyApi.getUserPlaylists(spotifyApi.clientId).then(
         function (data) {
             res.send(data.body.items)
@@ -79,7 +79,7 @@ router.get('/userplaylist', async (req, res) => {
         })
 })
 
-router.get('/playlist/:playlistId', (req, res) => {
+router.get('/api/playlist/:playlistId', (req, res) => {
     spotifyApi.getPlaylist(req.params.playlistId)
         .then(function (data) {
             res.send(data.body.tracks.items)
@@ -88,7 +88,7 @@ router.get('/playlist/:playlistId', (req, res) => {
         });
 })
 
-router.get('/searchplaylist/:name', (req, res) => {
+router.get('/api/searchplaylist/:name', (req, res) => {
     spotifyApi.searchPlaylists(req.params.name)
         .then(function (data) {
             res.send(data.body.playlists.items);
@@ -97,7 +97,7 @@ router.get('/searchplaylist/:name', (req, res) => {
         });
 })
 
-router.get('/searchartist/:artistname', async (req, res) => {
+router.get('/api/searchartist/:artistname', async (req, res) => {
     await spotifyApi.searchArtists(req.params.artistname).then(
         function (data) {
             res.send(data.body.artists.items)
@@ -108,7 +108,7 @@ router.get('/searchartist/:artistname', async (req, res) => {
 }
 )
 
-router.get('/playlistofartist/:artistId',(req,res)=>{
+router.get('/api/playlistofartist/:artistId',(req,res)=>{
 spotifyApi.getArtistTopTracks(req.params.artistId,'GB')
   .then(function(data) {
         res.send(data.body)
@@ -117,7 +117,7 @@ spotifyApi.getArtistTopTracks(req.params.artistId,'GB')
   })
 })
 
-router.get('/artistalbum/:artistId',(req,res)=>{
+router.get('/api/artistalbum/:artistId',(req,res)=>{
 spotifyApi.getArtistAlbums(req.params.artistId).then(
     function(data) {
         res.send(data.body)
@@ -128,7 +128,7 @@ spotifyApi.getArtistAlbums(req.params.artistId).then(
   )
 })
 
-router.get('/searchtracks/:trackname',(req,res)=>{
+router.get('/api/searchtracks/:trackname',(req,res)=>{
 spotifyApi.searchTracks(req.params.trackname)
   .then(function(data) {
     res.send(data.body.tracks.items)
@@ -137,7 +137,7 @@ spotifyApi.searchTracks(req.params.trackname)
   });
 })
 
-router.post('/createplaylist',(req,res)=>{
+router.post('/api/createplaylist',(req,res)=>{
     const {playlist_name,description,publicmode} = req.body
     spotifyApi.createPlaylist(playlist_name, { 'description': description, 'public': publicmode })
     .then(function(data) {
@@ -147,7 +147,7 @@ router.post('/createplaylist',(req,res)=>{
     });
 })
 
-router.post('/addtracks',(req,res,next)=>{
+router.post('/api/addtracks',(req,res,next)=>{
     const {playlistId,trackId} = req.body
     spotifyApi.addTracksToPlaylist(playlistId,['spotify:track:'+trackId+''])
   .then(function(data) {
