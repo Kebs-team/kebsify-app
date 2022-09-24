@@ -11,3 +11,28 @@
         </div>
     </div>
 
+    <div class="songs mb-4">
+        <h2 class="mb-1">Instrumental</h2>
+        <div class="d-flex flex-wrap">
+        <div class="card" *ngFor="let instrument of instrumental[0]">
+            <img class="card-img-top" [src]="instrument.images[0].url" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{instrument.name}}</h5>
+                <p class="card-text">{{instrument.description ? instrument.description : "Songs that keeps your heart rate up"}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="songs mb-4">
+        
+        <h2 class="mb-1">Chill</h2>
+        <div class="d-flex flex-wrap">
+        <div class="card" *ngFor="let chill of Chillout[0]">
+            <img class="card-img-top" [src]="chill.images[0].url" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{chill.name}}</h5>
+                <p class="card-text">{{chill.description ? chill.description : "Songs that keeps your heart rate up"}}</p>
+            </div>
+        </div>
+    </div>
+

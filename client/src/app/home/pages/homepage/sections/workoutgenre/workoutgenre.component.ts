@@ -9,6 +9,9 @@ import { ApiService } from 'src/app/api.service';
 })
 export class WorkoutgenreComponent implements OnInit {
   workOut : any[]  = []
+  instrumental : any[]  = []
+  Chillout : any[]  = []
+
 
 
   constructor(private _apiservice : ApiService,private _route : Router) { }
@@ -20,6 +23,21 @@ export class WorkoutgenreComponent implements OnInit {
         this.workOut.push(response)
       }
     )
+
+    this._apiservice.getPlayListByName('instrumental').subscribe(
+      (response)=>{
+        console.log("Instrumental data : ",response)
+        this.instrumental.push(response)
+      }
+    )
+
+    this._apiservice.getPlayListByName('Chill').subscribe(
+      (response)=>{
+        console.log("Chill data : ",response)
+        this.Chillout.push(response)
+      }
+    )
   }
+
 
 }
