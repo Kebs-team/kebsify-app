@@ -1,40 +1,28 @@
-.songs{
-    color: white;
-    margin-top: 60px;
-    .c-cart{
-        gap: 20px;
-        .card{
-            width: 180px;
-            background-color: rgb(36, 34, 34);
-            .card-img-top{
-                height: 170px;
-                width: 170px;
-                padding: 15px;
-                border-radius: 30px;
-
-            }
-            .card-body{
-                padding-left: 15px;
-                padding-bottom: 15px;
-                padding-top: 0px;
-                h3{
-                    white-space: nowrap; 
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    margin-bottom: 0px;
-                }
-                p{
-                    color: rgb(161, 155, 155);
-                }
-            }
-        }
-    }
-    
+h2{
+    color:white;
+    margin-top: 50px;
 }
+.card {
+    height: 254px;
+    width: 190px;
+    margin:4px;
+    background-color: rgb(53, 47, 47);
 
-.span{
-    cursor: pointer;
-    &:hover{
-        text-decoration: underline;
+    .card-img-top {
+        height: 166px;
+        padding: 10px;
+    }
+
+    .card-body {
+        .card-title {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color:white
+        }
+        .card-text{
+            color:white
+        }
+
     }
 }

@@ -1,0 +1,32 @@
+h2{
+    color:white;
+    margin-top: 50px;
+}
+.card {
+    height: 254px;
+    width: 190px;
+    margin:4px;
+    background-color: rgb(53, 47, 47);
+
+    .card-img-top {
+        height: 166px;
+        padding: 10px;
+    }
+
+    .card-body {
+        .card-text {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color:white
+        }
+        .card-title{
+            color:white;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color:white
+        }
+
+    }
+}

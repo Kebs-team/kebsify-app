@@ -26,4 +26,8 @@ export class ApiService {
         return this._httpclient.post('/api/createplaylist',body)
     }
 
+    getPlayListByName = (playlistname : String) => {
+        return this._httpclient.get('/api/searchplaylist/'+playlistname+'')
+    }
+
 }
