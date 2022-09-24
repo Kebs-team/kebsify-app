@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const router = express.Router()
 var SpotifyWebApi = require('spotify-web-api-node');
-const token = 'BQAG2Oc-HDpY2ziXQM2tUcz_7rNnfRSbBGiUG0gIrfRBFc8zTJPqLKObOMUNVxXy4yLFfR6PWnX2-feduvIuqnvB97kNWsIqaCxz5F1mTAU_6NBgToGL3KYsu_MYLmdvyqN0VCmDA6Yk9oZCSxSOMruD-nVmqWoQynU5dYLVzdOeR5-1dR26cyAvgbo1fsiTM0HAz746AsiTMn8p4B3Y-9RA6Q65YV-atjiI69OUOmm5DG_-5Q2mSJgUXp4vi7r2VFZ7c9vqY2OyJiHIUgabYgqiODL9dEiudTS63TJjsIKr5YFCTbFLtq9vtXt_l215Y6hTySvuX9N9w702sVRx'
+const token = 'BQCTKvrwQ52Yqce1ximzK8v5UpHK8GUfDCwJFg9LR-EcjqVOpF5SNRAcZaowYkcKuTJD8BiYSwjvKOlHFdFgPAMe7U1MXYdJ5AosXuJMM5Nj5JjBxnfDUdKjRTmXBNl5D-FfK3sugMRSmqT8-GS7u3q70-HcquSeHr4fYS860zPACKQ69EOfZvv_r8jpQQbEiP0JANq2e_gdzD_z-S4Lj4Gj1gY-7uBe-XHX23sFZjbGUC6qbqg4Wzl5Kv13sd63CPZXYrZxHG4-fXKpEqwQjGRw93m8R7k3MHoUJ_8jkrJfqhUtRb-Dl9SXl6ActaeKm9wltRrBUh4V02YYFJXd'
 app.use(express.json())
 
 // credentials are optional
