@@ -1,0 +1,55 @@
+
+.searchpage {
+    height: 100%;
+    margin-top: 55px
+}
+
+.searchinput {
+    border: 0;
+    border-radius: 500px;
+    color: #000;
+    height: 40px;
+    padding: 6px 44px;
+    text-overflow: ellipsis;
+    width: 364px;
+}
+
+.searchbutton {
+    font-size: 20px;
+    background-color: black;
+    margin-left: 4px;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+
+  .chips {
+    padding-top: 20px ;
+  }
+
+  .buttons {
+    border-radius: 50px;
+    color: white;
+    background-color: #232323;
+    margin: 4px
+  }
+
+  .activebuttons {
+    border-radius: 50px;
+    color: black;
+    background-color: white;
+    margin: 4px
+  }
