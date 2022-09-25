@@ -9,6 +9,10 @@ import { SearchpageComponent } from './pages/searchpage/searchpage.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { DialogOverviewExampleDialog } from './pages/homepage/sections/Dialogue/createplaylist.component';
+import { SplaylistComponent } from './pages/searchpage/sections/splaylist/splaylist.component';
+import { SartistsComponent } from './pages/searchpage/sections/sartists/sartists.component';
+import { SsongsComponent } from './pages/searchpage/sections/ssongs/ssongs.component';
+import { SalbumsComponent } from './pages/searchpage/sections/salbums/salbums.component';
 
 
 
@@ -19,7 +23,11 @@ import { DialogOverviewExampleDialog } from './pages/homepage/sections/Dialogue/
     WorkoutgenreComponent,
     SearchpageComponent,
     ProfileComponent,
-    DialogOverviewExampleDialog 
+    DialogOverviewExampleDialog,
+    SplaylistComponent,
+    SartistsComponent,
+    SsongsComponent,
+    SalbumsComponent 
     
   ],
   imports: [

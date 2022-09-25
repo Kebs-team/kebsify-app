@@ -1,0 +1,11 @@
+<div class="songs mb-4">
+    <!-- <h2 class="mb-1">Instrumental</h2> -->
+    <div class="d-flex flex-wrap">
+    <div class="card" *ngFor="let pl of playistLists[0]">
+        <img class="card-img-top" [src]="pl.images[0].url" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{pl.name}}</h5>
+            <p class="card-text">By {{pl.owner.display_name}}</p>
+        </div>
+    </div>
+</div>

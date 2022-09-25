@@ -22,12 +22,23 @@ export class ApiService {
         return this._httpclient.get('/api/recentlyplayedtracks')
     }
     
+    getPlayListByName = (playlistname : String) => {
+        return this._httpclient.get('/api/searchplaylist/'+playlistname+'')
+    }
+    
+    getSearchArtist = (artistname : String) => {
+        return this._httpclient.get('/api/searchartist/'+artistname+'')
+    }
+    
+    getSearchTrack = (trackname : String) => {
+        return this._httpclient.get('/api/searchtracks/'+trackname+'')
+    }
+
     createPlayList = (body:any) => {
         return this._httpclient.post('/api/createplaylist',body)
     }
 
-    getPlayListByName = (playlistname : String) => {
-        return this._httpclient.get('/api/searchplaylist/'+playlistname+'')
-    }
 
+
+    
 }
