@@ -3,9 +3,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 
 @Component({
     selector: 'dialog-overview-example-dialog',
-    templateUrl: 'createplaylist.component.html',
-    styles: [ '::ng-deep .mat-dialog-container  {background-color : white}'
-    ]
+    templateUrl: 'createplaylist.component.html'
 })
 export class DialogOverviewExampleDialog {
     constructor(

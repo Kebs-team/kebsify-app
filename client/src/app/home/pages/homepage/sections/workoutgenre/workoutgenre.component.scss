@@ -30,3 +30,27 @@ h2{
 
     }
 }
+
+.__tracks-container--hide {
+
+    overflow: hidden;
+
+    height: 370px;
+
+  }
+
+
+
+.__artists-container--hide {
+
+    overflow: hidden;
+    height: 290px;
+
+  }
+  .show {
+
+    overflow: visible;
+  
+    height: auto;
+  
+  }

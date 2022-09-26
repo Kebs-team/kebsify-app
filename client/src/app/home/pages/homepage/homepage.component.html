@@ -8,12 +8,12 @@
             <div class="left-options">
                 <mat-icon>
                     home
-                </mat-icon> <span>Home</span>
+                </mat-icon><button mat-button routerLink = '/home' >Home </button> 
             </div>
-            <div class="left-options">
-                <mat-icon>
-                    search
-                </mat-icon> <span>Search</span>
+            <div class="left-options"><mat-icon>
+                search
+            </mat-icon>
+               <button mat-button routerLink = '/home/search' >Search </button> 
             </div>
             <div class="left-options">
                 <mat-icon>
@@ -62,10 +62,11 @@
             <div>
                 <!-- <app-recentlyplayed></app-recentlyplayed>
                 <app-workoutgenre></app-workoutgenre> -->
+                
 
-                <app-searchpage></app-searchpage>
+                <!-- <app-searchpage></app-searchpage> -->
 
-                <!-- <router-outlet></router-outlet> -->
+                <router-outlet></router-outlet>
             </div>
         </div>
     </div>
