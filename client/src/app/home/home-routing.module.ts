@@ -13,11 +13,14 @@ const routes: Routes = [
   {
     path: '',
     component: HomepageComponent,
-    // canActivate : [AuthGuardService]
     children : [
       {
         path: '',
-        component:RecentlyplayedComponent
+        component:RecentlyplayedComponent,
+      },
+      {
+        path : 'profile',
+        component:ProfileComponent,
       },
       {
         path:'search',
@@ -25,16 +28,16 @@ const routes: Routes = [
         children:[
           {
             path:'songs/:input',
-            component:SsongsComponent
+            component:SsongsComponent,
           },{
             path: 'playlist/:input',
-            component: SplaylistComponent
+            component: SplaylistComponent,
           },
           {
             path: 'artist/:input',
-            component: SartistsComponent
+            component: SartistsComponent,
           }
-        ]
+        ],
       }
     ]
   },

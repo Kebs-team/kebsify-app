@@ -1,10 +1,15 @@
 <div class="songs mb-4">
     <div class="d-flex flex-wrap">
-    <div class="card" *ngFor="let track of trackLists[0]">
+    <div class="card" *ngFor="let track of trackLists[0];let i=index">
         <img class="card-img-top" [src]="track.album.images[0].url" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{track.name}}</h5>
-            <p class="card-text">{{track.duration_ms }}</p>
+            <span class="card-text">{{track.duration_ms }}</span>
+            <span style="float:right;color:white"><mat-icon (click)="onPlay(i)">play_circle_outline</mat-icon></span>
+              <!-- <audio controls autoplay>
+                <source [src]="track.uri | Uri" type="audio/mpeg">
+              </audio> -->
+             
         </div>
     </div>
 </div>

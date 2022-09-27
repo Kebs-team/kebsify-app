@@ -23,7 +23,7 @@ export class SignupComponent implements OnInit {
   onSubmit = () => {
     console.log(this.signUpForm.value)
     if(this.signUpForm.value.userConfirmEmail === this.signUpForm.value.userEmail && this.signUpForm.valid){
-      this._snackbar.open("Signed in successfully","close",{
+      this._snackbar.open("Signed in successfully","",{
         duration:2000,
         verticalPosition: 'top',
         horizontalPosition: 'end',
@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
       this._route.navigate(["/register/login"])
     }
     else{
-      this._snackbar.open("Incorrect data","close",{
+      this._snackbar.open("Incorrect data","",{
         duration:2000,
         verticalPosition: 'top',
         horizontalPosition: 'end',

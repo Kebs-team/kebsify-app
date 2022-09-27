@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { HomeService } from '../../../home.service';
 
 @Component({
   selector: 'app-ssongs',
@@ -10,7 +11,7 @@ import { ApiService } from 'src/app/api.service';
 export class SsongsComponent implements OnInit {
   data : any
   input = ''
-  constructor(private _apiservice : ApiService, private _router : Router,private _route: ActivatedRoute) { }
+  constructor(private _apiservice : ApiService, private _router : Router,private _route: ActivatedRoute,private _homeservice : HomeService) { }
 
   trackLists : any[]  = []
 
@@ -28,5 +29,9 @@ export class SsongsComponent implements OnInit {
         this.trackLists.push(response)
       }
     )
+  }
+
+  onPlay = (pos:number) => {
+     this._homeservice.setTrack(this.trackLists[0][pos].uri)
   }
 }

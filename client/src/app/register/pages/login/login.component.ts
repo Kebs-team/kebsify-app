@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   onSubmit = () => {
     console.log(this.signinForm);
     if(this._registerservice.GetUser(this.signinForm.value.email!,this.signinForm.value.password!)){
-      this._snackbar.open("Signed in successfully","close",{
+      this._snackbar.open("Signed in successfully","",{
         duration:2000,
         verticalPosition: 'top',
         horizontalPosition: 'end',
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       this._route.navigate(['/home'])
     }
     else{
-        this._snackbar.open("Invalid Credentials","close",{
+        this._snackbar.open("Invalid Credentials","",{
           duration:2000,
           verticalPosition: 'top',
           horizontalPosition: 'end',

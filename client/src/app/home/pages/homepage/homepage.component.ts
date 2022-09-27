@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { HomeService } from '../home.service';
 import { DialogOverviewExampleDialog } from './sections/Dialogue/createplaylist.component';
 
 @Component({
@@ -10,26 +11,34 @@ import { DialogOverviewExampleDialog } from './sections/Dialogue/createplaylist.
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-  profile_data : any
-  name! : string
+  profile_data: any
+  name!: string
   playListName!: string;
   Description!: string;
-  myPlaylist : any[]  = []
-  constructor(private _apiservice : ApiService,private _route : Router,public dialog: MatDialog) { }
+  myPlaylist: any[] = []
+  trackUri = ''
+  constructor(private _apiservice: ApiService, private _route: Router, public dialog: MatDialog, private _homeservice: HomeService) { }
 
   ngOnInit(): void {
     this._apiservice.getMe().subscribe(
       (response) => {
-        console.log("Response is : ",response)
+        console.log("Response is : ", response)
         this.profile_data = response
         this.name = this.profile_data.display_name
       }
     )
+
     this._apiservice.getPlayList().subscribe(
-      (response)=>{
+      (response) => {
         console.log(response)
         this.myPlaylist.push(response)
         console.log(this.myPlaylist.length)
+      }
+    )
+
+    this._homeservice.trackSubject.subscribe(
+      data => {
+        this.trackUri = this._homeservice.track
       }
     )
   }
@@ -37,29 +46,29 @@ export class HomepageComponent implements OnInit {
   onCreatePlayList = () => {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '250px',
-      data: {playListName: this.playListName, Description : this.Description},
+      data: { playListName: this.playListName, Description: this.Description },
     });
 
     dialogRef.afterClosed().subscribe(result => {
       this.myPlaylist.push(result)
       this._apiservice.createPlayList({
-        "playlist_name":result.playListName,
+        "playlist_name": result.playListName,
         "description": result.Description,
-        "publicmode":"true"
-     }).subscribe(
-      (response)=>{
-        this._apiservice.getPlayList().subscribe(
-          (response)=>{
-            console.log(response)
-            this.myPlaylist.splice(0)
-            this.myPlaylist.push(response)
-          }
-        )
-      }
-     )
+        "publicmode": "true"
+      }).subscribe(
+        (response) => {
+          this._apiservice.getPlayList().subscribe(
+            (response) => {
+              console.log(response)
+              this.myPlaylist.splice(0)
+              this.myPlaylist.push(response)
+            }
+          )
+        }
+      )
     });
   }
-  }
+}
 
 
 

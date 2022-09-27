@@ -13,6 +13,8 @@ import { SplaylistComponent } from './pages/searchpage/sections/splaylist/splayl
 import { SartistsComponent } from './pages/searchpage/sections/sartists/sartists.component';
 import { SsongsComponent } from './pages/searchpage/sections/ssongs/ssongs.component';
 import { SalbumsComponent } from './pages/searchpage/sections/salbums/salbums.component';
+import { UrlPipe } from '../security.pipe';
+import { HomeService } from './pages/home.service';
 
 
 
@@ -27,7 +29,8 @@ import { SalbumsComponent } from './pages/searchpage/sections/salbums/salbums.co
     SplaylistComponent,
     SartistsComponent,
     SsongsComponent,
-    SalbumsComponent 
+    SalbumsComponent ,
+    UrlPipe
     
   ],
   imports: [

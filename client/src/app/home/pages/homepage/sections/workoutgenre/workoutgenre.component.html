@@ -17,8 +17,8 @@
     </div>
 
     <div class="songs mb-4" [ngClass]="more ? 'show' : '__artists-container--hide'">
-        <h2 class="mb-1">Instrumental</h2>
-        <button class="btn-template search-section__btn" (click)="seeMoreRecentlyPlayed()" style="float:right;margin-right: 45px;color:white;background-color: grey;">See all</button>
+        <h2 class="d-inline mb-1">Instrumental</h2>
+        <button mat-button class="btn-template search-section__btn" (click)="seeMoreRecentlyPlayed()" style="float:right;margin-right: 45px;color:white;">See all</button>
         <div class="d-flex flex-wrap">
             <div class="card" *ngFor="let instrument of instrumental[0]">
                 <img class="card-img-top" [src]="instrument.images[0].url" alt="Card image cap">
@@ -29,18 +29,19 @@
                 </div>
             </div>
         </div>
+        </div>
 
         <div class="songs mb-4" [ngClass]="more ? 'show' : '__artists-container--hide'">
 
-            <h2 class="mb-1">Chill</h2>
-            <button class="btn-template search-section__btn" (click)="seeMoreRecentlyPlayed()" style="float:right;margin-right: 45px;color:white;background-color: grey;">See all</button>
+            <h2 class="d-inline mb-1">Chill</h2>
+            <button mat-button class="btn-template search-section__btn" (click)="seeMoreRecentlyPlayed()" style="float:right;margin-right: 45px;color:white;">See all</button>
             <div class="d-flex flex-wrap">
                 <div class="card" *ngFor="let chill of Chillout[0]">
                     <img class="card-img-top" [src]="chill.images[0].url" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{chill.name}}</h5>
-                        <p class="card-text">{{chill.description ? chill.description : "Songs that keeps your heart rate
-                            up"}}</p>
+                        <p class="card-text">{{chill.description ? chill.description : "Songs that keeps your heart rate up"}}</p>
                     </div>
                 </div>
+            </div>
             </div>
