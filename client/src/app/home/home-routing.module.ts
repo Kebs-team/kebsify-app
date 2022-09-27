@@ -24,14 +24,14 @@ const routes: Routes = [
         component:SearchpageComponent,
         children:[
           {
-            path:'songs',
+            path:'songs/:input',
             component:SsongsComponent
           },{
-            path: 'playlist',
+            path: 'playlist/:input',
             component: SplaylistComponent
           },
           {
-            path: 'artist',
+            path: 'artist/:input',
             component: SartistsComponent
           }
         ]

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -9,13 +9,28 @@ import { ApiService } from 'src/app/api.service';
 })
 export class SartistsComponent implements OnInit {
 
-  constructor(private _apiservice : ApiService,private _route : Router) { }
+ 
 
   artistLists : any[]  = []
 
 
+  input = ''
+  data : any
+  constructor(private _apiservice : ApiService,private _router: ActivatedRoute) { }
+
+  playistLists : any[]  = []
+
+
   ngOnInit(): void {
-    this._apiservice.getSearchArtist('Anirudh').subscribe(
+
+    this._router.params.subscribe(
+      (data) => {
+        this.data = data
+        this.input = this.data.input
+      }
+     )
+    const newLocal = this;
+    newLocal._apiservice.getSearchArtist(this.input).subscribe(
       (response)=>{
         console.log("artist data : ",response)
         this.artistLists.push(response)

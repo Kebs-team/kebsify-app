@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -8,14 +8,22 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./splaylist.component.scss']
 })
 export class SplaylistComponent implements OnInit {
-
-  constructor(private _apiservice : ApiService, private _route : Router) { }
+  input = ''
+  data : any
+  constructor(private _apiservice : ApiService,private _route: ActivatedRoute) { }
 
   playistLists : any[]  = []
 
 
   ngOnInit(): void {
-    this._apiservice.getPlayListByName('Anirudh').subscribe(
+
+    this._route.params.subscribe(
+      (data) => {
+        this.data = data
+        this.input = this.data.input
+      }
+     )
+    this._apiservice.getPlayListByName(this.input).subscribe(
       (response)=>{
         console.log("playlist data : ",response)
         this.playistLists.push(response)

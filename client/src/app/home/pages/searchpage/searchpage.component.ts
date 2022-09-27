@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./searchpage.component.scss']
 })
 export class SearchpageComponent implements OnInit {
-
+  searchInput = ''
   isartist = false
   isplaylist = false
   issongs = false
@@ -18,23 +18,23 @@ export class SearchpageComponent implements OnInit {
   }
   
   onSongs(){
-  this.issongs = !this.issongs
+  this.issongs = true
   this.isplaylist = false
   this.isartist = false
-   this._router.navigate(['songs'],{ relativeTo: this._route })
+   this._router.navigate(['songs',this.searchInput],{ relativeTo: this._route })
   }
 
   onPlaylist(){
     this.issongs = false
-    this.isplaylist = !this.isplaylist
+    this.isplaylist = true
     this.isartist = false
-    this._router.navigate(['playlist'],{ relativeTo: this._route })
+    this._router.navigate(['playlist',this.searchInput],{ relativeTo: this._route })
    }
 
    onArtist(){
     this.issongs = false
     this.isplaylist = false
-    this.isartist = !this.isartist
-    this._router.navigate(['artist'],{ relativeTo: this._route })
+    this.isartist = true
+    this._router.navigate(['artist',this.searchInput],{ relativeTo: this._route })
    }
 }
