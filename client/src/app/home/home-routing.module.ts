@@ -5,6 +5,9 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { RecentlyplayedComponent } from './pages/homepage/sections/recentlyplayed/recentlyplayed.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SearchpageComponent } from './pages/searchpage/searchpage.component';
+import { SartistsComponent } from './pages/searchpage/sections/sartists/sartists.component';
+import { SplaylistComponent } from './pages/searchpage/sections/splaylist/splaylist.component';
+import { SsongsComponent } from './pages/searchpage/sections/ssongs/ssongs.component';
 
 const routes: Routes = [
   {
@@ -18,7 +21,20 @@ const routes: Routes = [
       },
       {
         path:'search',
-        component:SearchpageComponent
+        component:SearchpageComponent,
+        children:[
+          {
+            path:'songs',
+            component:SsongsComponent
+          },{
+            path: 'playlist',
+            component: SplaylistComponent
+          },
+          {
+            path: 'artist',
+            component: SartistsComponent
+          }
+        ]
       }
     ]
   },

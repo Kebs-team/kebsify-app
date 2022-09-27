@@ -9,17 +9,12 @@
       </div>
       <div class="chips">
         <div class="example-button-row">
-            <button mat-raised-button class="activebuttons">All</button>
-            <button mat-raised-button class="buttons">Artists</button>
-            <button mat-raised-button color="primary" class="buttons">Playlists</button>
-            <button mat-raised-button color="primary" class="buttons">Songs</button>
-            <button mat-raised-button color="primary" class="buttons">Albums</button>
+            <button mat-raised-button class="buttons" (click) ="onArtist()"  [ngStyle]="{'background-color':isartist === true ? 'white' : '','color':isartist === true ? 'black' : 'white'}">Artists</button>
+            <button mat-raised-button color="primary" class="buttons" (click) ="onPlaylist()" [ngStyle]="{'background-color':isplaylist === true ? 'white' : '','color':isplaylist === true ? 'black' : 'white'}">Playlists</button>
+            <button mat-raised-button color="primary" class="buttons" (click) ="onSongs()" [ngStyle]="{'background-color':issongs === true ? 'white' : '','color':issongs === true ? 'black' : 'white'}">Songs</button>
         </div>
       </div>
       <div>
-        <!-- <router-outlet></router-outlet> -->
-        <app-sartists></app-sartists>
-        <!-- <app-ssongs></app-ssongs> -->
-        <!-- <app-splaylist></app-splaylist> -->
+        <router-outlet></router-outlet>
       </div>
 </div>
